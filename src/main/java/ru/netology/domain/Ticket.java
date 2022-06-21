@@ -18,10 +18,10 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket otherTicket) {
-        if (price < otherTicket.getPrice()) {
+        if (price < otherTicket.price) {
             return -1;
         }
-        if (price > otherTicket.getPrice()) {
+        if (price > otherTicket.price) {
             return 1;
         }
         return 0;

@@ -25,7 +25,7 @@ public class TicketManager {
         Ticket[] tickets = repository.getAll();
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : tickets) {
-            if ((from == ticket.getDepartureAirport()) && (to == ticket.getArrivalAirport())) {
+            if (ticket.getDepartureAirport().equals(from) && ticket.getArrivalAirport().equals(to)) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < tmp.length - 1; i++) {
                     tmp[i] = result[i];
